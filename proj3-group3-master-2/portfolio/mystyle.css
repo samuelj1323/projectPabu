@@ -1,0 +1,56 @@
+.remove-bottom-margin{
+    margin-bottom: 0px;
+}
+.anychart-credits {
+   display: none;
+}
+
+.ssugg{
+    display: none;
+}
+
+.card-title{
+    color: black !important;
+}
+
+.sent {
+    margin-top: 10px;
+    background: wheat;
+    height: 20px;
+    background: red;
+}
+
+.sent div{
+    height: 100%;
+    width: 33.333%;
+    float: left;
+
+}
+
+.pos{
+    background: green;
+}
+
+.nut{
+    background: yellow;
+}
+
+.neg{
+    background: red;
+}
+.card-content{
+    padding-bottom: 10px !important;
+}
+
+.sname{
+    margin-right: 10px ;
+}
+
+.mylight-blue{
+    background: #c3e8f4;
+}
+
+.chartDiv{
+    max-width: 90%;
+    margin: 0 auto;
+}

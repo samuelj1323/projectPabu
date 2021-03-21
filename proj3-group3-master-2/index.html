@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pabu</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridly/1.1.0/gridly.min.css" type="text/css" charset="utf-8">-->
+  <link rel="stylesheet" href="mystyle.css" type="text/css">
+  
+  
+</head>
+
+<body>
+  <div class="black" style="border-radius:5px;width: 60px;height: 30px;position: fixed;bottom: 0px;right: 0px;margin: 10px;"><div id="ball" class="grey" style="border-radius:2.5px;width: 90%;height: 80%;z-index: 10001;margin-left: 3px;margin-top: 3px;"></div></div>
+  <nav>
+    <div class="nav-wrapper">
+      
+      <a href="#!" class="brand-logo">Pabu</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="./index.html">Search</a></li>
+        <li><a href="./portfolio.html">My Portfolio</a></li>
+        <li><a id="night-btn" href="#">Night Mode</a></li>
+        <li><a id="font-enlarge">Enlarge Font:</a></li>
+        <li><input id="txtstuff" style="margin-top: 24px;margin-right: 5px;" type="range" min="15" max="25"></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="./index.html">Search</a></li>
+    <li><a href="./portfolio.html">My Portfolio</a></li>
+    <li><a id="night-btn1"  href="#">Night Mode</a></li>
+    <li><a id="font-enlarge">Enlarge Font</a></li>
+    <li><input id="txtstuff1" style="padding: 7px;" type="range" min="15" max="25"></li>
+  </ul>
+
+  
+  <div class="carousel carousel-slider center">
+    <div class="carousel-item c1 white-text" href="#one!">
+      <div id="newstitle">News</div>
+      <h2 id="headline1">First Panel</h2>
+      <p id="teaser1" class="white-text">This is your first panel</p>
+      <div class="prov"><a id="provider1" href="#">jhgf</a></div>
+    </div>
+    <div class="carousel-item c2 white-text" href="#two!">
+      <div id="newstitle">News</div>
+      <h2 id="headline2">Second Panel</h2>
+      <p id="teaser2" class="white-text">This is your second panel</p>
+      <div class="prov"><a id="provider2" href="#"></a></div>
+    </div>
+    <div class="carousel-item c3 white-text" href="#three!">
+      <div id="newstitle">News</div>
+      <h2 id="headline3">Third Panel</h2>
+      <p id="teaser3" class="white-text">This is your third panel</p>
+      <div class="prov"><a id="provider3" href="#"></a></div>
+    </div>
+    <div class="carousel-item c4 white-text" href="#four!">
+      <div id="newstitle">News</div>
+      <h2 id="headline4">Fourth Panel</h2>
+      <p id="teaser4" class="white-text">This is your fourth panel</p>
+      <div class="prov"><a id="provider4" href="#"></a></div>
+    </div>
+    <div class="carousel-item c5 white-text" href="#four!">
+      <div id="newstitle">News</div>
+      <h2 id="headline5">Fourth Panel</h2>
+      <p id="teaser5" class="white-text">This is your fourth panel</p>
+      <div class="prov"><a id="provider5" href="#"></a></div>
+    </div>
+  </div>
+  
+
+  <div class="container searchdiv">
+  <div class="row">
+    <div class="input-field col s11">
+      <input id="search" type="text" >
+      <label for="search">Search Stock Name</label>
+      <div id="search-sugg" class="collection ssugg">
+        
+      </div>
+    </div>
+    <div class="input-field col s1">
+      <a id="search-btn" class="waves-effect waves-light btn"><i class="material-icons">search</i></a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="input-field col s5">
+      <select id="tscale">
+        <option value="" disabled selected>Choose your option</option>
+        <option class="timescale" value="day">Day</option>
+        <option class="timescale" value="week">Week</option>
+        <option class="timescale" value="month">Month</option>
+        <option class="timescale" value="year">Year</option>
+        <option class="timescale" value="decade">Decade</option>
+      </select>
+      <label>Select Timescale</label>
+    </div>
+    <div class="input-field col s3">
+      
+    </div>
+    <div class="input-field col s4">
+      <a id="addStock" class="waves-effect waves-light btn">Add to MyPortfolio</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <canvas id="stockChart" width="200" height="100"></canvas>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <h3>Tweets</h3>
+    <div class="lege rrr plus circle"></div><p class="rrr ltxt">Positive</p>
+    <div class="lege rrr negs circle"></div><p class="rrr ltxt">Negative</p>
+    <div class="lege rrr midds circle"></div><p class="rrr ltxt">Neutral</p>
+    <div id="twe8ets" class="col s12">
+      <ul id="tweets" class="collection">
+        <li class="collection-item avatar">
+          <img class="ppic" src="images/yuna.jpg" alt="" class="circle">
+          <span class="title"></span>
+          <p class="text">First Line
+          </p>
+        </li>
+        </ul>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div id="sentiments" class="col s12">
+      <h3>Sentiment Analysis</h3>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div id="sentimentPie"></div>
+</div>
+
+
+  <footer class="page-footer myOrange">
+    <div class="container">
+      <div class="row remove-bottom-margin">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+      
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.linkedin.com/in/cyberjayant">Jayant Singh <i class="material-icons" style="position: relative;top: 6px;">link</i></a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/sam-m-59b9b9145/">Samuel Mahan <i class="material-icons" style="position: relative;top: 6px;">link</i></a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <div class="sidenav-overlay"></div><div class="drag-target"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+  <script src="ui-controls.js"></script>
+  <script src="news.js"></script>
+  <script src="./twitterAPI/twitterBot.js"></script>
+  <script src="stocks.js"></script>
+  <script src="sentimentxml2.js"></script>
+  <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+  
+
+</body>
+
+</html>
